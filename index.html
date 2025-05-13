@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>buy your dream car</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script defer src="./scripts/script.js"></script>
+  </head>
+  <body>
+    <video
+      class="backVideo"
+      src="./assets/main_screen_video.mp4"
+      muted
+      autoplay
+      loop
+    ></video>
+    <header>
+      <p class="logo">buy your dream car</p>
+      <div class="menu">
+        <p class="redHover" id="carCatalog">car catalog</p>
+        <p class="redHover" id="homepage">homepage</p>
+        <p class="redHover">more</p>
+      </div>
+    </header>
+    <div id="mainScreen">
+      <div class="title">
+        <p class="upTitle">with us you can</p>
+        <p class="mainTitle">buy your dream car</p>
+      </div>
+    </div>
+    <div id="container">
+      <p id="heading" class="headingStyle">choose your fighter</p>
+      <input
+        type="text"
+        id="searchInput"
+        class="input"
+        placeholder="search for brand..."
+      />
+      <div id="carList"></div>
+      <div id="selectedCar" class="hidden">
+        <div id="selectedCarDiv" class="selected"></div>
+        <div id="purchaseForm">
+          <p class="headingStyle">purchase form</p>
+          <div>
+            <label><span class="paymentData">payment method:</span></label>
+            <input type="radio" name="payment" value="leasing" required /><span
+              >leasing</span
+            >
+            <input type="radio" name="payment" value="cash" /><span>cash</span>
+            <br />
+            <label><span class="paymentData">full name:</span></label>
+            <input type="text" id="fullname" class="paymentInput" />
+            <br />
+            <label><span class="paymentData">delivery date:</span></label>
+            <select id="deliveryDate" class="paymentInput"></select>
+            <br />
+          </div>
+          <div class="accessoriesDiv">
+            <label><span class="accessoriesLabel">accessories:</span></label>
+            <div id="accessoriesList"></div>
+          </div>
+          <div id="totalPrice"></div>
+          <button id="buyButton" class="button">buy</button>
+          <div id="errorDiv" class="error hidden"></div>
+        </div>
+        <footer>
+          <button id="backButton" class="button back">
+            back to car catalog
+          </button>
+        </footer>
+      </div>
+      <div id="summary" class="hidden"></div>
+    </div>
+  </body>
+</html>

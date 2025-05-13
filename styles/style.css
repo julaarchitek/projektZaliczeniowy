@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+body {
+  margin: 0;
+  color: rgba(255, 255, 255);
+  font-family: "Orbitron", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.backVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  display: flex;
+  height: 60px;
+  z-index: 1;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.menu {
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  gap: 150px;
+}
+
+.redHover:hover {
+  color: rgb(169, 15, 15);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#mainScreen {
+  height: 100vh;
+}
+
+.title {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.upTitle {
+  font-size: 20px;
+  margin: 0;
+}
+
+.mainTitle {
+  font-size: 60px;
+  font-weight: 500;
+  margin: 0;
+}
+
+#container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 0 100px 20px 100px;
+  scroll-margin-top: 75px;
+}
+
+.headingStyle {
+  font-size: 30px;
+  text-align: center;
+  margin: 30px 0 30px 0;
+}
+
+.input {
+  margin: 30px 0 30px 0;
+  font-family: "Orbitron", sans-serif;
+  color: rgba(255, 255, 255);
+  font-size: 20px;
+  border: none;
+  background: none;
+  border-bottom: 0.5px solid rgb(255, 255, 255);
+}
+
+#carList {
+  min-height: 60vh;
+}
+
+.error {
+  color: rgb(169, 15, 15);
+  font-size: 25px;
+  text-align: center;
+}
+
+.carDiv {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0);
+  margin-bottom: 10px;
+  padding: 20px;
+  display: flex;
+  border-radius: 20px;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.carImg {
+  width: 750px;
+  height: 500px;
+  object-fit: cover;
+  mask-image: linear-gradient(90deg, black 70%, transparent 100%);
+  flex-shrink: 0;
+}
+
+.infoDiv {
+  width: 100%;
+}
+
+.carModel {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0 30px 0;
+  max-width: 100%;
+}
+
+.carModel:hover {
+  color: rgb(169, 15, 15);
+  cursor: pointer;
+  transform: scale(1.1);
+  transform-origin: left;
+}
+
+.carData {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: right;
+  padding-right: 20px;
+  display: inline-block;
+  width: 80px;
+}
+
+.selected {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0);
+  margin-bottom: 10px;
+  padding: 20px;
+  display: flex;
+  border-radius: 20px;
+  gap: 20px;
+}
+
+.selected .carModel {
+  transform: none;
+  color: inherit;
+  cursor: default;
+  color: rgb(169, 15, 15);
+}
+
+#purchaseForm:not(.hidden) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.paymentData {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: right;
+  padding-right: 20px;
+  display: inline-block;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.paymentInput {
+  font-family: "Orbitron", sans-serif;
+  color: rgba(255, 255, 255);
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 0.5px solid rgb(255, 255, 255);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: rgb(169, 15, 15);
+  cursor: pointer;
+}
+
+.accessoriesDiv {
+  text-align: center;
+}
+
+.accessoriesLabel {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 25px 0 20px 0;
+  display: block;
+}
+
+.accessoriesContent {
+  display: flex;
+  margin-top: 5px;
+}
+
+.accessoryItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.accessoryLabel {
+  min-width: 170px;
+  text-align: left;
+}
+
+#totalPrice {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.totalPriceLabel {
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.totalPriceValue {
+  font-size: 35px;
+  font-weight: bold;
+  /* color: rgb(104, 99, 99); */
+  color: rgb(169, 15, 15);
+  background-color: rgba(0, 0, 0);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.button {
+  padding: 10px;
+  font-family: "Orbitron", sans-serif;
+  color: rgba(255, 255, 255);
+  font-size: 20px;
+  background: rgba(0, 0, 0);
+  border: 0.5px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(169, 15, 15);
+}
+
+#errorDiv {
+  position: absolute;
+  top: 15%;
+  left: 73%;
+  background-color: rgba(0, 0, 0);
+  border: 0.5px solid rgb(169, 15, 15);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.footer {
+  width: 100%;
+  align-items: left;
+}
+
+.back {
+  font-size: 13px;
+  margin: 20px;
+}
+
+#summary {
+  margin-top: 30px;
+}
+
+.summaryLabels {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.selectedPaymentDiv {
+  display: flex;
+  align-items: center;
+}
+
+.selectedPayment {
+  margin-left: 10px;
+  color: rgb(104, 99, 99);
+}
+
+.totalDiv {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.totalValue {
+  font-weight: 600;
+  font-size: 25px;
+  color: rgb(104, 99, 99);
+}
+
+.hidden {
+  display: none;
+}
