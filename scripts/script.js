@@ -129,9 +129,6 @@ const $selectedCar = document.getElementById("selectedCar");
 const $selectedCarDiv = document.getElementById("selectedCarDiv");
 const $purchaseForm = document.getElementById("purchaseForm");
 
-const formError = document.getElementById("formError");
-const carModel = document.getElementsByClassName("carModel");
-
 document.addEventListener("DOMContentLoaded", function () {
   renderCars(cars);
   $searchInput.addEventListener("input", filterCars);
