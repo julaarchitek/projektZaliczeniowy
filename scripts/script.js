@@ -135,10 +135,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (localStorage.getItem("purchaseCompleted") === "true") {
     $fullnameInput.value = "";
+
+    document.querySelectorAll('input[name="payment"]').forEach((input) => {
+      input.checked = false;
+    });
+
     localStorage.removeItem("purchaseCompleted");
   } else {
     const savedName = localStorage.getItem("fullname");
     if (savedName) $fullnameInput.value = savedName;
+
+    const savedPayment = localStorage.getItem("paymentMethod");
+    if (savedPayment) {
+      const paymentInput = document.querySelector(
+        `input[name="payment"][value="${savedPayment}"]`
+      );
+      if (paymentInput) paymentInput.checked = true;
+    }
   }
 });
 
@@ -245,7 +258,6 @@ function filterCars() {
 // FUNKCJA "Select Car"
 function selectCar(car) {
   selectedCar = car;
-  localStorage.setItem("selectedCar", JSON.stringify(car));
   $container.scrollIntoView();
   $carList.classList.add("hidden");
   $selectedCar.classList.remove("hidden");
